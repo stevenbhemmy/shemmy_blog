@@ -1,0 +1,9 @@
+*.pyc
+*.*~
+*~
+*.*bak
+*.*#
+*.log
+*.swp
+.env
+db.sqlite3

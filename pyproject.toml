@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "shemmy"
+version = "0.0.1"
+description = "Steven Hemmy's personal website."
+authors = ["Steven Hemmy <stevenbhemmy@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "3.12.1"
+Django = "^5.0"
+psycopg2 = "*"
+python-decouple = "*"
+django-pgclone = "*"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.0"
+django-debug-toolbar = "*"
+icecream = "*"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+
+[build-system]
+requires = ["poetry>=1.7.1"]
+build-backend = "poetry.core.masonry.api"

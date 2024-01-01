@@ -1,0 +1,6 @@
+TODO:
+
+Add all blog CRUD update points
+Add a basic home page
+Create generic page views
+Implmenet with HTMX?

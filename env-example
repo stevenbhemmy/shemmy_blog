@@ -1,0 +1,39 @@
+# NOTE: this is an example... set up for LOCAL development.
+# Edit and copy to .env in main directory
+
+# MOST of these settings default (internally) to the PRODUCTION values...
+# only set them here if you need to override them for local or staging.
+# REQUIRED settings are not commented in this file.
+
+# These are the default ports for various services.
+# Uncomment and change them if you have local services on those ports
+# or are running multiple projects simultaneously
+MH_PORT=1025
+MH_WEB=8025
+POSTGRES_PORT=5432
+REDIS_HOST=localhost
+REDIS_PORT=6379
+
+# Database Container settings...
+POSTGRES_DB=shemmy
+POSTGRES_USER=shemmy
+POSTGRES_PASSWORD=local_password
+POSTGRES_HOST=localhost
+
+# These are application-specific settings...
+ALLOWED_HOSTS=localhost
+BASE_URL=http://localhost:8000
+ENVIRONMENT=local
+DEBUG=True
+DJANGO_SECRET_KEY=CHANGE_ME!
+#DJANGO_SETTINGS_MODULE=core.settings
+# NOTE: this is only used for LOCAL environment, and should be an ABSOLUTE PATH!
+# ie: HTDOCS_BASE=/home/<username>/dev/project/htdocs/
+#HTDOCS_BASE=/home/<username>/<path to project>Dropbox/htdocs/
+#MEDIA_ROOT=media
+#MEDIA_URL=/media/
+SENTRY_DSN=CHANGE_ME!
+SENTRY_ENVIRONMENT=local
+#STATIC_ROOT=static
+#STATIC_URL=/static/
+#TIME_ZONE=America/Chicago

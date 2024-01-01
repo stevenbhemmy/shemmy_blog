@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "_document_head.html" %}
+    <title>{% block title %}{% endblock %} | {{ request.site.name }}</title>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    {% include "_site_header.html" %}
+    <div id="site-content" class="ctr">
+        {% block content %}{% endblock %}
+    </div>
+    {% include "_site_footer.html" %}
+    {% block extra_foot %}{% endblock %}
+</body>
+</html>
