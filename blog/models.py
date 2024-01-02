@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from ckeditor.fields import RichTextField
+
 
 class BlogArticle(models.Model):
     author = models.ForeignKey(
@@ -33,10 +35,13 @@ class BlogArticle(models.Model):
         blank=True,
         verbose_name="Description.",
     )
-    body = models.TextField(
+    body = RichTextField(
         blank=True,
         verbose_name="Body Text.",
     )
+
+    def __str__(self):
+        return f"{self.title} -- {self.author}"
 
 
 class BlogCategory(models.Model):
@@ -48,6 +53,9 @@ class BlogCategory(models.Model):
         verbose_name="Category description.",
     )
 
+    def __str__(self):
+        return self.name
+
 
 class BlogTag(models.Model):
     name = models.CharField(max_length=175)
@@ -56,3 +64,6 @@ class BlogTag(models.Model):
         blank=True,
         verbose_name="Tag description.",
     )
+
+    def __str__(self):
+        return self.name

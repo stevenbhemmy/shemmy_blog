@@ -53,8 +53,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # First Party
+    "core",
     "blog",
     # Third Party
+    "ckeditor",
 ]
 
 MIDDLEWARE = [
