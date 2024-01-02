@@ -2,10 +2,5 @@
 {% load static %}
 
 {% block content %}
-<div id="blog_article" >
-    <h2 class="blog_title">{{ blog.title }}</h2>
-    <div class="blog_body">{{ blog.body|safe }}</div>
-    <div class="blog_author">{{ blog.author }}</div>
-    <div class="blog_created">{{ blog.created}}</div>
-</div>
+    {% include "_blog_article.html" %}
 {% endblock %}

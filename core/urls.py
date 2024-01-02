@@ -24,11 +24,9 @@ def trigger_error(request):
 
 
 urlpatterns = [
-    # simple home page (at /)
     path("error-debug/", trigger_error),
     path("admin/", admin.site.urls),
     path("", include("blog.urls")),
-    # for debugging sentry connectivity...
 ]
 
 if settings.DEBUG:
