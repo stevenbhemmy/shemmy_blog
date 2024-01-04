@@ -1,6 +1,5 @@
     <div id="blog_article" >
-        <h2 class="blog_title">{{ blog.title }}</h2>
-        <div class="blog_body">{{ blog.body|safe }}</div>
-        <div class="blog_author">{{ blog.author }}</div>
-        <div class="blog_created">{{ blog.created}}</div>
+        <h2 class="blog-title">{{ blog.title }}</h2>
+        <div class="blog-byline"> {{ blog.created }} | {{ blog.author }} </div>
+        <div class="blog-body">{{ blog.body|safe }}</div>
     </div>
