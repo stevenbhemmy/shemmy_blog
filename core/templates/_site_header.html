@@ -2,5 +2,10 @@
     <div id="site-header-content">
         <h1>Shemmy a.k.a. Steven Hemmy</h1>
         <h2>Coder, Musician, Teacher</h2>
+        <ul>
+            {% for item in menu_items %}
+            <li> <a href="{% url 'blog:article' item.blog.slug %}">{{ item.blog.title }}</a>
+            {% endfor %}
+        </ul>
     </div>
 </header>

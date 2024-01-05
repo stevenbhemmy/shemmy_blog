@@ -4,6 +4,16 @@ from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 
 
+class Page(models.Model):
+    # pages are just blogs pinned as main menu item, for now
+    # creating separate object in case other objects can be pinned
+    # later on
+    blog = models.ForeignKey(
+        "BlogArticle",
+        on_delete=models.CASCADE,
+    )
+
+
 class BlogArticle(models.Model):
     author = models.ForeignKey(
         User,

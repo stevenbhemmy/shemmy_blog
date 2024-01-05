@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 
-from .models import BlogArticle, BlogCategory, BlogTag
+from .models import Page, BlogArticle, BlogCategory, BlogTag
 
 
 @admin.register(BlogArticle)
@@ -30,3 +30,17 @@ class BlogTagAdmin(admin.ModelAdmin):
         "name",
         "description",
     )
+
+
+@admin.register(Page)
+class PageAdmin(admin.ModelAdmin):
+    list_display = (
+        "title",
+        "slug",
+    )
+
+    def title(self, obj):
+        return obj.blog.title
+
+    def slug(self, obj):
+        return obj.blog.title
