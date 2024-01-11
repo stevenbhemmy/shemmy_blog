@@ -1,5 +1,5 @@
 """
-ASGI config for IL-Django-Example project.
+ASGI config for shemmy project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
