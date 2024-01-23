@@ -116,6 +116,20 @@ django = ">=3.2.4"
 sqlparse = ">=0.2"
 
 [[package]]
+name = "django-extensions"
+version = "3.2.3"
+description = "Extensions for Django"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "django-extensions-3.2.3.tar.gz", hash = "sha256:44d27919d04e23b3f40231c4ab7af4e61ce832ef46d610cc650d53e68328410a"},
+    {file = "django_extensions-3.2.3-py3-none-any.whl", hash = "sha256:9600b7562f79a92cbf1fde6403c04fee314608fefbb595502e34383ae8203401"},
+]
+
+[package.dependencies]
+Django = ">=3.2"
+
+[[package]]
 name = "django-js-asset"
 version = "2.2.0"
 description = "script tag with additional attributes for django.forms.Media"
@@ -438,4 +452,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.1"
-content-hash = "505bb81a5f2e8592f7583b3664b1a79d27e9840818d4e5463d063f51cdee4e6e"
+content-hash = "39ecbea906e9c0c1e5119bc0bca72ae57383ce11e73467ff2afe5d53c856f735"

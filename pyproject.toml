@@ -12,6 +12,7 @@ psycopg2 = "*"
 python-decouple = "*"
 django-pgclone = "*"
 django-ckeditor = "^6.7.0"
+django-extensions = "^3.2.3"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.6.0"

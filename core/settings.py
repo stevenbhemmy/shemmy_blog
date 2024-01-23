@@ -33,7 +33,6 @@ PROJECT_DIR = BASE_DIR / "core"
 # /srv/sites/<site_name>/htdocs
 HTDOCS_BASE = Path(__file__).resolve().parent.parent.parent.parent / "htdocs"
 
-
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
 
 SECRET_KEY = config("DJANGO_SECRET_KEY", "django-insecure-=1-1_oshs)#-jzq!t8&ky)*o%2)5zy6s+$8qd*gm4%gy$*@lgl")
@@ -52,6 +51,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
     # First Party
     "core",
     "blog",
