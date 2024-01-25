@@ -3,8 +3,11 @@
         <h1>Shemmy a.k.a. Steven Hemmy</h1>
         <h2>Coder, Musician, Teacher</h2>
         <ul>
-            {% for item in menu_items %}
-            <li> <a href="{% url 'blog:article' item.blog.slug %}">{{ item.blog.title }}</a>
+            <li> <a href="{% url 'blog:article' 'about' %}">About</a> </li>
+            <li> <a href="{% url 'blog:article' 'about' %}">Blog</a> </li>
+            <li> <a href="{% url 'blog:article' 'about' %}">Categories</a> </li>
+            {% for item in page_items %}
+            <li> <a href="{% url 'blog:article' item.blog.slug %}">{{ item.blog.title }}</a> </li>
             {% endfor %}
         </ul>
     </div>

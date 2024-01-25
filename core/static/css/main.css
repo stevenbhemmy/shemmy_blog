@@ -3,7 +3,10 @@
     --bg: rgba(229, 229, 229, 1);
     --muted: rgba(191, 191, 191, 1);
     --accent: rgba(178, 47, 17, 1);
+    --lt-accent: rgba(201, 78, 50, 1);
     --text: rgba(51, 51, 51, 1);
+    --serif-font: Georgia, Serif;
+    --sans-serif-font: Helvitca, Arial, Sans-serif;
 }
 
 
@@ -19,7 +22,7 @@ html, body {
 }
 body {
     background-color: var(--bg);
-    font: Georgia, Serif;
+    font-family: var(--serif-font);
     font-size: 1.25em;
     color: var(--text);
     line-height: 1.75;
@@ -37,8 +40,8 @@ input, button, textarea, select {
 a {
     color: var(--accent);
 }
-a {
-    color: var(--accent);
+a:hover {
+    color: var(--lt-accent);
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -56,6 +59,21 @@ h1, h2, h3 {
     max-width: 70ch;
     padding: 3ch;
     margin: auto;
+}
+
+header {
+    ul {
+        list-style-type: none;
+        margin-top: 15px;
+        li {
+            display: inline-block;
+            margin-right: 15px;
+            a {
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 header, footer {
